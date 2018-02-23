@@ -84,7 +84,7 @@ I use a four-layer Convolutional Neural Network (CNN) model that, besides [n4ITK
 
 ### Training the Model
 
-I created the model using Keras and ran it on an Amazon AWS GPU-optimized EC2 instance. I tested several models, but elected to use the 4-layer sequential model shown in Figure 6 due to the two-week time constraint of the project, as it had best initial results and fastest run time.
+I created the model using Keras and ran it on an Amazon AWS GPU-optimized EC2 instance. I tested several models, but elected to use the 4-layer sequential model shown in Figure 6 due to the time constraint of the project, as it had best initial results and fastest run time.
 
 The model was trained on randomly selected 33x33 patches of MRI images to classify the center pixel. Each input has 4 channels, one for each imaging sequence, so the net can learn what relative pixel intensities are hallmarks of each given class. The model is trained on approximately 50,000 patches for six epochs. The model generally begins to overfit after six epochs, and the validation accuracy on balanced classes reaches approximately 55 percent. [Future directions](#future-directions) will include more training phases and updated methods for patch selection.
 
